@@ -4,7 +4,7 @@ const cpuStats = require('cpu-stats');
 const create = (options) => {
   io.listen(options.port);
   io.on('connection', socket => {
-    socket.emit('CONNECTION_ACCEPTED', options.ProcName);
+    socket.emit('CONNECTION_ACCEPTED', options.procName);
   });
   if(options.autoUpdateCpuStats){
     setInterval(()=>{
