@@ -1,6 +1,6 @@
 {
   "name": "@katonahmike/trans-parent",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Easily expose stats from long-running node processes via websockets",
   "main": "index.js",
   "scripts": {
