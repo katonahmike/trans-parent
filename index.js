@@ -1,5 +1,6 @@
 const io = require('socket.io')();
 const cpuStats = require('cpu-stats');
+let cpuTimer;
 
 const create = (options) => {
   io.listen(options.port);
@@ -7,7 +8,7 @@ const create = (options) => {
     socket.emit('CONNECTION_ACCEPTED', options.procName);
   });
   if(options.autoUpdateCpuStats){
-    setInterval(()=>{
+    cpuTimer=setInterval(()=>{
       cpuStats(1000, function(error, result) {
         if(error) return console.error(error);
         broadcast('CPU_UPDATE',result);
@@ -22,6 +23,7 @@ const broadcast = (event,data) => {
 
 const destroy = () => {
   io.close();
+  clearInterval(cpuTimer);
 }
 
 module.exports = {create,broadcast,destroy};
