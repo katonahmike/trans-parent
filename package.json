@@ -1,5 +1,5 @@
 {
-  "name": "trans-parent",
+  "name": "@katonahmike/trans-parent",
   "version": "1.0.0",
   "description": "Easily expose stats from long-running node processes via websockets",
   "main": "index.js",

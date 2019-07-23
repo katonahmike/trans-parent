@@ -6,7 +6,7 @@ npm install --save trans-parent
 ```
 ## Usage
 ```javascript
-const trans = require('trans-parent');
+const trans = require('@katonahmike/trans-parent');
 
 trans.create({
   port : 8888, // Pick a port number and listen for connections
