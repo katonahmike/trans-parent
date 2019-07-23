@@ -2,7 +2,7 @@
 Easily expose stats from long-running node processes via websockets.
 ## Installation
 ```sh
-npm install --save trans-parent
+npm install --save @katonahmike/trans-parent
 ```
 ## Usage
 ```javascript
